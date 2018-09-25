@@ -6,6 +6,11 @@
 #include <time.h>
 #include <string.h>
 
+#ifdef __MACH__
+#include <mach/clock.h>
+#include <mach/mach.h>
+#endif
+
 #include <df_errors.h>
 
 #define DF_BYTE_MAX 256
