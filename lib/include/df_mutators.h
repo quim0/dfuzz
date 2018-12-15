@@ -3,13 +3,7 @@
 
 #include <stdint.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
-
-#ifdef __MACH__
-#include <mach/clock.h>
-#include <mach/mach.h>
-#endif
 
 #include <df_errors.h>
 
@@ -27,7 +21,7 @@ typedef struct {
     size_t cap;
 } mutator_t;
 
-mutator_t df_mutator = { .data=NULL, .len=0, .cap=0 };
+extern mutator_t df_mutator;
 
 // Mutator struct actions
 error_t df_mutator_initialize_custom(size_t);
